@@ -1,0 +1,25 @@
+{% extends 'animeapp/base.html' %}
+
+{% block content %}
+
+    <div class="container-fluid">
+        <div class="col-sm-2">
+            <div class="thumbnail">
+                <img class="img-responsive" src = "{{anime.anime_logo}}">
+            </div>
+        </div>
+        <div class="col-sm-8 thumbnail">
+            <h1>Title: {{anime.anime_title}}</h1>
+            <h3>Genre: {{anime.anime_genre}}</h3>
+            <h3>Studio: {{anime.anime_studio}}</h3>
+            <h3>Sypnosis:</h3>
+            <h4>{{anime.anime_sypnosis}}</h4>
+        </div>
+        {% if error_message %}
+            <p><strong>{{ error_message }}</strong></p>
+        {% endif %}
+
+    </div>
+
+{% endblock %}
+
